@@ -73,12 +73,12 @@ on-mode-changed = []
     outer.bottom =     0
     outer.top =        0
 
-    outer.left =       0
-    outer.right =      0
+    #outer.left =       0
+    #outer.right =      0
 
     # Uncomment if padding for widescreen is desired
-    #outer.left = [{ monitor."2" = 450 }, 0]
-    #outer.right = [{ monitor."2" = 550 }, 0]
+    outer.left = [{ monitor."2" = 380 }, 0]
+    outer.right = [{ monitor."2" = 380 }, 0]
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -143,6 +143,7 @@ on-mode-changed = []
     alt-7 = 'workspace 7'
     alt-b = 'workspace Browser'
     alt-c = 'workspace Cursor'
+    alt-d = 'workspace Docker'
     alt-f = 'workspace Finder'
     alt-n = 'workspace Notes'
     alt-i = 'workspace IntelliJ'
@@ -160,6 +161,7 @@ on-mode-changed = []
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-b = 'move-node-to-workspace Browser'
     alt-shift-c = 'move-node-to-workspace Cursor'
+    alt-shift-d = 'move-node-to-workspace Docker'
     alt-shift-f = 'move-node-to-workspace Finder'
     alt-shift-n = 'move-node-to-workspace Notes'
     alt-shift-i = 'move-node-to-workspace IntelliJ'
@@ -232,6 +234,10 @@ run = "move-node-to-workspace Notes"
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
 run = "move-node-to-workspace Messaging"
+
+[[on-window-detected]]
+if.app-id = 'com.electron.dockerdesktop'
+run = "move-node-to-workspace Docker"
 
 
 [workspace-to-monitor-force-assignment]

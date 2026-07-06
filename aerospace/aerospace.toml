@@ -224,7 +224,7 @@ run = "move-node-to-workspace Postman"
 
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.intellij'
-run = "move-node-to-workspace IntelliJ"
+run = ['layout floating', 'move-node-to-workspace IntelliJ']
 
 [[on-window-detected]]
 if.app-id = 'md.obsidian'

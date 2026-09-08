@@ -5,5 +5,6 @@
   // plugin/ollama.js -- `ollama pull <model>` is enough to make one appear.
   // To override a discovered model's settings, add it back under
   // provider.ollama.models here; entries in this file take precedence.
-  "model": "ollama/qwen3.6:35b-a3b"
+  "model": "ollama/qwen2.5-coder:1.5b",
+  "theme": "tokyonight"
 }

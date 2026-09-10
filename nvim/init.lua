@@ -496,10 +496,22 @@ do
     -- You can put your default mappings / updates / etc. in here
     --  All the info you're looking for is in `:help telescope.setup()`
     defaults = {
-      path_display = {'filename_first'},
+      path_display = { 'filename_first' },
+      vimgrep_arguments = {
+        'rg',
+        '--color=never',
+        '--no-heading',
+        '--with-filename',
+        '--line-number',
+        '--column',
+        '--ignore-case',
+      },
     },
     extensions = {
       ['ui-select'] = { require('telescope.themes').get_dropdown() },
+      fzf = {
+        case_mode = 'ignore_case',
+      },
     },
   }
 

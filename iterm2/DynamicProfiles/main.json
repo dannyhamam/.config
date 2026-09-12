@@ -5,6 +5,7 @@
       "Rewritable" : true,
       "Name" : "main",
       "Guid" : "main-tokyonight",
+      "Custom Directory" : "Recycle",
       "Option Key Sends" : 2,
       "Right Option Key Sends" : 0,
       "Triggers" : [

@@ -7,6 +7,19 @@ echo "====================================================="
 echo "🚀 Bootstrapping development environment from $DOTFILES_DIR"
 echo "====================================================="
 
+# 0. Install system dependencies for Neovim (portable)
+# NOTE: vim.pack auto-installs Neovim plugins, but external tools like
+# the C compiler, make, ripgrep, and the tree-sitter CLI must come from the OS.
+# Without these, nvim-treesitter fails with: ENOENT 'tree-sitter'
+if ! command -v brew >/dev/null 2>&1; then
+    echo "📦 Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# NOTE: brew 'tree-sitter' is only the library now, the CLI Neovim needs is 'tree-sitter-cli'
+brew install neovim git ripgrep fd unzip make tree-sitter-cli
+echo "✅ Installed Neovim system dependencies via Homebrew"
+
 # 1. Symlink ~/.zshrc -> ~/.config/zsh/.zshrc
 if [ -f "$HOME/.zshrc" ] && [ ! -L "$HOME/.zshrc" ]; then
     echo "📦 Backing up existing non-symlink ~/.zshrc to ~/.zshrc.backup"

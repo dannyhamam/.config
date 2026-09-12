@@ -2,10 +2,11 @@
   "Profiles" : [
     {
       "Use Separate Colors for Light and Dark Mode" : false,
+      "Rewritable" : true,
       "Name" : "main",
-      "Window Type" : 0,
       "Guid" : "main-tokyonight",
-      "Rewritable" : true
+      "Option Key Sends" : 2,
+      "Right Option Key Sends" : 0
     }
   ]
 }

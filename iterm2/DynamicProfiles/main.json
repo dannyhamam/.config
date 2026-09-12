@@ -6,7 +6,34 @@
       "Name" : "main",
       "Guid" : "main-tokyonight",
       "Option Key Sends" : 2,
-      "Right Option Key Sends" : 0
+      "Right Option Key Sends" : 0,
+      "Triggers" : [
+        {
+          "action" : "iTermEnterWorkgroupTrigger",
+          "matchType" : 113,
+          "parameter" : "builtin.claudeCode",
+          "partial" : false,
+          "eventParams" : {
+            "jobName" : "claude"
+          },
+          "contentregex" : "",
+          "regex" : "",
+          "disabled" : true
+        },
+        {
+          "action" : "iTermExitWorkgroupTrigger",
+          "matchType" : 114,
+          "parameter" : "",
+          "partial" : false,
+          "eventParams" : {
+            "jobName" : "claude",
+            "leaderOnly" : true
+          },
+          "contentregex" : "",
+          "regex" : "",
+          "disabled" : true
+        }
+      ]
     }
   ]
 }

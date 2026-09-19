@@ -46,7 +46,7 @@ automatically-unhide-macos-hidden-apps = false
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
 persistent-workspaces = [
-    "1", "2", "3", "4", "5", "6", "7", "8", "Obsidian", "Browser", "Cursor", "Finder", "Notes", "Postman", "Messaging", "Terminal"
+    "1", "2", "3", "4", "5", "6", "7", "8", "Obsidian", "Browser", "Cursor", "Finder", "Notes", "Postman", "Messaging", "Terminal", "Edit"
 ]
 
 # A callback that runs every time binding mode changes
@@ -113,6 +113,9 @@ on-mode-changed = []
     alt-slash = 'layout tiles horizontal vertical'
     alt-comma = 'layout accordion horizontal vertical'
 
+    # Toggle floating so the window can be moved freely
+    alt-shift-space = 'layout floating tiling'
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus left'
     alt-j = 'focus down'
@@ -142,6 +145,7 @@ on-mode-changed = []
     alt-b = 'workspace Browser'
     alt-c = 'workspace Cursor'
     alt-d = 'workspace Docker'
+    alt-e = 'workspace Edit'
     alt-f = 'workspace Finder'
     alt-n = 'workspace Notes'
     alt-i = 'workspace IntelliJ'
@@ -162,6 +166,7 @@ on-mode-changed = []
     alt-shift-b = 'move-node-to-workspace Browser'
     alt-shift-c = 'move-node-to-workspace Cursor'
     alt-shift-d = 'move-node-to-workspace Docker'
+    alt-shift-e = 'move-node-to-workspace Edit'
     alt-shift-f = 'move-node-to-workspace Finder'
     alt-shift-n = 'move-node-to-workspace Notes'
     alt-shift-i = 'move-node-to-workspace IntelliJ'
@@ -243,6 +248,10 @@ if.app-id = 'com.hnc.Discord'
 run = "move-node-to-workspace Messaging"
 
 [[on-window-detected]]
+if.app-id = 'com.lemon.lvoverseas'
+run = "move-node-to-workspace Edit"
+
+[[on-window-detected]]
 if.app-id = 'com.electron.dockerdesktop'
 run = "move-node-to-workspace Docker"
 
@@ -263,6 +272,7 @@ Postman=2
 Slack=2
 Terminal=2
 IntelliJ=2
+Edit=2
 
 # Second monitor (1 is my vertical monitor)
 6 = 1

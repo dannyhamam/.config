@@ -2,7 +2,7 @@
   "Profiles" : [
     {
       "Use Separate Colors for Light and Dark Mode" : false,
-      "Rewritable" : true,
+      "Rewritable" : false,
       "Name" : "main",
       "Guid" : "main-tokyonight",
       "Custom Directory" : "Recycle",

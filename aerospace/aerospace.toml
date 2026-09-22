@@ -240,7 +240,7 @@ if.app-id = 'com.apple.Notes'
 run = "move-node-to-workspace Notes"
 
 [[on-window-detected]]
-if.app-id = 'com.apple.Notes'
+if.app-id = 'notion.id'
 run = "move-node-to-workspace Notes"
 
 [[on-window-detected]]

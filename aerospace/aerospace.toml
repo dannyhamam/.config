@@ -248,6 +248,10 @@ if.app-id = 'com.hnc.Discord'
 run = "move-node-to-workspace Messaging"
 
 [[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+run = "move-node-to-workspace Messaging"
+
+[[on-window-detected]]
 if.app-id = 'com.lemon.lvoverseas'
 run = "move-node-to-workspace Edit"
 
